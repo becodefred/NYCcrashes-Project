@@ -49,17 +49,17 @@ Remove rows for which location of the crash is not available. Also remove rows w
 
 5.7 Processing typevehi (i = 1, 2, 3, 4, 5)
 
-5.7.1 Find unique values in typevehi and convert these to lower case.
+&nbsp;&nbsp;5.7.1 Find unique values in typevehi and convert these to lower case.
 
-5.7.2 Find unique values containing string &quot;tow&quot; (examples: TOW, Tow truck), apply &quot;tow filter&quot; to typevehi (i = 1, 2, 3, 4, 5) and replace the name of any occurence with name &quot;Tow&quot;
+&nbsp;&nbsp;5.7.2 Find unique values containing string &quot;tow&quot; (examples: TOW, Tow truck), apply &quot;tow filter&quot; to typevehi (i = 1, 2, 3, 4, 5) and replace the name of any occurence with name &quot;Tow&quot;
 
-5.7.3 Repeat the process described in 5.7.2 with the following filters: &quot;amb&quot; (Ambulance), &quot;trac&quot; (Tractor Truck), &quot;fir&quot; (Fire Truck), &quot;sco&quot; (Scooter), &quot;pic&quot; (Pickup), &quot;motor&quot; (Motorcycle), &quot;bik&quot; (Bike), &quot;dum&quot; (Dump Truck), &quot;tax&quot; (Taxi), &quot;box&quot; (Box Truck), &quot;van&quot; (Van), &quot;bus&quot; (Bus), &quot;trail&quot; (Trailer), &quot;seda&quot; (Sedan), &quot;fork&quot; (Forklift)
+&nbsp;&nbsp;5.7.3 Repeat the process described in 5.7.2 with the following filters: &quot;amb&quot; (Ambulance), &quot;trac&quot; (Tractor Truck), &quot;fir&quot; (Fire Truck), &quot;sco&quot; (Scooter), &quot;pic&quot; (Pickup), &quot;motor&quot; (Motorcycle), &quot;bik&quot; (Bike), &quot;dum&quot; (Dump Truck), &quot;tax&quot; (Taxi), &quot;box&quot; (Box Truck), &quot;van&quot; (Van), &quot;bus&quot; (Bus), &quot;trail&quot; (Trailer), &quot;seda&quot; (Sedan), &quot;fork&quot; (Forklift)
 
-5.7.4 Apply miscellaneous filters to get the following unique values: Limousine, Truck, Mail Truck, Station Wagon/Sport Utility Vehicle, Garbage or Refuse
+&nbsp;&nbsp;5.7.4 Apply miscellaneous filters to get the following unique values: Limousine, Truck, Mail Truck, Station Wagon/Sport Utility Vehicle, Garbage or Refuse
 
-5.7.5 Remove garbage or insignificant values in typevehi (examples: OTHER, UNKNOWN, pc)
+&nbsp;&nbsp;5.7.5 Remove garbage or insignificant values in typevehi (examples: OTHER, UNKNOWN, pc)
 
-5.7.6 Replace NaN values in typevehi (i = 1, 2, 3, 4, 5) with 0
+&nbsp;&nbsp;5.7.6 Replace NaN values in typevehi (i = 1, 2, 3, 4, 5) with 0
 
 5.8 Look for duplicates
 
