@@ -1,22 +1,22 @@
 ### 1. Background
 
-Name of the Project: Data preprocessing - NYC Motor Vehicle Crashes
-Context of the study: BeCode, Liège Campus, AI/Data Operator Bootcamp, December 2020
-Objective: apply preprocessing techniques to a dataset (.csv file)
-Author: Frédéric Fourré
+Name of the Project: Data preprocessing - NYC Motor Vehicle Crashes  
+Context of the study: BeCode, Liège Campus, AI/Data Operator Bootcamp, December 2020  
+Objective: apply preprocessing techniques to a dataset (.csv file)   
+Author: Frédéric Fourré  
 Email: fourrefrederic593@gmail.com
 
 
 ### 2. Dataset
 
-Source: New York City (NYC) OpenData (see https://data.cityofnewyork.us)
-Title: Motor Vehicle Collisions - Crashes
-Initial sample shape: 100000 rows, 29 columns
-Description: each row represents a crash event. A few column names: &quot;crash date&quot;, &quot;zip code&quot;, &quot;number of persons injured&quot;, &quot;contributing factor vehicle 1&quot;, &quot;vehicle type code 1&quot;. Full description available at https://data.cityofnewyork.us
+Source: New York City (NYC) OpenData (see https://data.cityofnewyork.us)  
+Title: Motor Vehicle Collisions - Crashes  
+Initial sample shape: 100000 rows, 29 columns  
+Description: each row represents a crash event. A few column names: &quot;crash date&quot;, &quot;zip code&quot;, &quot;number of persons injured&quot;, &quot;contributing factor vehicle 1&quot;, &quot;vehicle type code 1&quot;. Full description available at https://data.cityofnewyork.us  
 
-Data in our sample were collected between 23/03/2013 and 29/09/2020
+Data in our sample were collected between 23/03/2013 and 29/09/2020  
 
-Name of the .csv file containing the original data: data_100000.csv
+Name of the .csv file containing the original data: data_100000.csv  
 
 
 ### 3. Tools/Keywords
@@ -37,7 +37,7 @@ Initial shape of the DataFrame is (100000, 29)
 
 5.2 Put crash events in chronological order, and add columns &quot;year&quot;, &quot;month&quot;, &quot;day&quot;, &quot;hour&quot; and &quot;minute&quot;
 
-5.3 There were missing values (NA in Pandas) for &quot;latitude&quot;, &quot;longitude&quot; and &quot;location&quot;. We made geocoding tests to see if it was possible to retrieve latitude and longitude from &quot;borough&quot;, &quot;zipcode&quot;, &quot;onstreet&quot; and &quot;offstreet&quot;. The answer is NO, in general, due to mechanical errors in writing which are unpredictable
+5.3 There were missing values (NA in Pandas) for &quot;latitude&quot;, &quot;longitude&quot; and &quot;location&quot;. We made geocoding tests to see if it was possible to retrieve latitude and longitude from &quot;borough&quot;, &quot;zipcode&quot;, &quot;onstreet&quot; and &quot;offstreet&quot;. The answer is no, in general, due to mechanical errors in writing which are unpredictable
 
 Remove rows for which location of the crash is not available. Also remove rows with latitude and longitude equal to 0
 
