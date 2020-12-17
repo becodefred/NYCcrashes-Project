@@ -1,4 +1,4 @@
-###1. Background
+### 1. Background
 
 Name of the Project: Data preprocessing - NYC Motor Vehicle Crashes
 Context of the study: BeCode, Liège Campus, AI/Data Operator Bootcamp, December 2020
@@ -7,7 +7,7 @@ Author: Frédéric Fourré
 Email: fourrefrederic593@gmail.com
 
 
-###2.Dataset
+### 2. Dataset
 
 Source: New York City (NYC) OpenData (see https://data.cityofnewyork.us)
 Title: Motor Vehicle Collisions - Crashes
@@ -19,17 +19,17 @@ Data in our sample were collected between 23/03/2013 and 29/09/2020
 Name of the .csv file containing the original data: data_100000.csv
 
 
-###3. Tools/Keywords
+### 3. Tools/Keywords
 
 GeoPy, NumPy, Pandas
 
 
-###4. To run the file
+### 4. To run the file
 
 From terminal, type `python3`, then type `exec(open('crashesfred.py').read())`
 
 
-###5. Preprocessing steps
+### 5. Preprocessing steps
 
 Initial shape of the DataFrame is (100000, 29)
 
@@ -76,7 +76,7 @@ Final shape of DataFrame is (90779, 39)
 5.12 Save the final DataFrame in a .csv file: see datcrashesfred.csv
 
 
-###6. Improvements/To do
+### 6. Improvements/To do
 
 For 5.7: 
 
