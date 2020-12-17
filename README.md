@@ -19,7 +19,7 @@ Data in our sample were collected between 23/03/2013 and 29/09/2020
 Name of the .csv file containing the original data: data_100000.csv  
 
 
-### 3. Tools/Keywords
+### 3. Tools
 
 GeoPy, NumPy, Pandas
 
