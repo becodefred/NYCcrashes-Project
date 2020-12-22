@@ -67,7 +67,7 @@ Remove rows for which location of the crash is not available. Also remove rows w
 
 5.10 Reset index of DataFrame
 
-5.11 Reverse geocoding: from coordinates in &quot;location2&quot; find values for borough, zipcode and street, and put the results in &quot;borough2&quot;, &quot;zipcode2&quot; and &quot;onstreet2&quot;. 
+5.11 Reverse geocoding: from coordinates in &quot;location2&quot; find values for borough, zipcode and street, and put the results in &quot;borough2&quot;, &quot;zipcode2&quot; and &quot;onstreet2&quot;
 
 Used to check the data in the original dataset or replace missing values 
 
