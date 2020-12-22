@@ -292,15 +292,15 @@ reverse = RateLimiter(geolocator.reverse, min_delay_seconds = 1)
 
 # reset index (a new column "index" is created which contains the old indexes)
 dat = dat.reset_index()
-#shape is now (90779, 36)
+# shape is now (90779, 36)
 
-#index will be [a, a+1, etc., b-1]
+# for loop: index will be [a, a+1, etc., b-1]
 a = 0
 b = 1000
 datloop = dat.iloc[a:b, :]
 
 i = 0
-#for row in dat[["location2"]].head(n = 10).itertuples():
+# for row in dat[["location2"]].head(n = 10).itertuples():
 for row in datloop.itertuples():
     infoloc = reverse(row.location2)      
     if "road" in infoloc.raw["address"]:
