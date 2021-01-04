@@ -2,7 +2,7 @@
 
 Name of the Project: Data preprocessing - NYC Motor Vehicle Crashes  
 Context of the study: BeCode, Liège Campus, AI/Data Operator Bootcamp, December 2020  
-Objective: apply preprocessing techniques to a dataset (.csv file)  
+Objective: apply preprocessing techniques to clean a dataset (.csv file)  
 Author: Frédéric Fourré  
 Email: fourrefrederic593@gmail.com  
 
@@ -16,7 +16,7 @@ Description: each row represents a crash event. A few column names: &quot;crash 
 
 Data in our sample were collected between 23/03/2013 and 29/09/2020  
 
-Name of the .csv file containing the original data: data_100000.csv  
+Name of the .csv file containing the original data: `data_100000.csv`  
 
 
 ### 3. Tools
@@ -24,7 +24,7 @@ Name of the .csv file containing the original data: data_100000.csv
 GeoPy, NumPy, Pandas
 
 
-### 4. To run the file
+### 4. To run the file (Python3)
 
 From terminal, type `python3`, then type `exec(open('crashesfred.py').read())`
 
@@ -43,23 +43,21 @@ Remove rows for which location of the crash is not available. Also remove rows w
 
 5.4 Remove rows for which (factorveh1 = NA AND factorveh2 = NA AND etc. AND factorveh5 = NA) 
 
-5.5 Replace NaN and &quot;Unspecified&quot; values in factorvehi (i = 1, 2, 3, 4, 5) by 0
+5.5 Replace NaN and &quot;Unspecified&quot; values in factorvehi (i = 1, 2,..., 5) by 0
 
 5.6 Replace NaN values in &quot;borough&quot;, &quot;zipcode&quot;, &quot;onstreet&quot;, &quot;offstreet&quot; and &quot;crossstreet&quot; by 0
 
-5.7 Processing typevehi (i = 1, 2, 3, 4, 5)
+5.7 Processing typevehi (i = 1, 2,..., 5)
 
-&nbsp;&nbsp;5.7.1 Find unique values in typevehi and convert these to lower case
+&nbsp;&nbsp;5.7.1 Using function `reduce_unique_val` (see file `reduction.py`), find the values in typevehi (i = 1, 2,..., 5) that contain string &quot;tow&quot; and replace them with &quot;Tow&quot; (example: values such as &quot;Tow Truck&quot;, &quot;TOW&quot; and &quot;tow t&quot; will be replaced by &quot;Tow&quot;)
 
-&nbsp;&nbsp;5.7.2 Find unique values containing string &quot;tow&quot; (examples: TOW, Tow truck), apply &quot;tow filter&quot; to typevehi (i = 1, 2, 3, 4, 5) and replace the name of any occurence with name &quot;Tow&quot;
+&nbsp;&nbsp;5.7.2 Repeat the process described in 5.7.1 with other strings. Examples: &quot;amb&quot; (Ambulance), &quot;trac&quot; (Tractor Truck), &quot;fir&quot; (Fire Truck), &quot;sco&quot; (Scooter), &quot;pic&quot; (Pickup), &quot;dum&quot; (Dump Truck), &quot;tax&quot; (Taxi), &quot;box&quot; (Box Truck), &quot;van&quot; (Van), &quot;bus&quot; (Bus), &quot;trail&quot; (Trailer), &quot;seda&quot; (Sedan), &quot;fork&quot; (Forklift)
 
-&nbsp;&nbsp;5.7.3 Repeat the process described in 5.7.2 with the following filters: &quot;amb&quot; (Ambulance), &quot;trac&quot; (Tractor Truck), &quot;fir&quot; (Fire Truck), &quot;sco&quot; (Scooter), &quot;pic&quot; (Pickup), &quot;motor&quot; (Motorcycle), &quot;bik&quot; (Bike), &quot;dum&quot; (Dump Truck), &quot;tax&quot; (Taxi), &quot;box&quot; (Box Truck), &quot;van&quot; (Van), &quot;bus&quot; (Bus), &quot;trail&quot; (Trailer), &quot;seda&quot; (Sedan), &quot;fork&quot; (Forklift)
+&nbsp;&nbsp;5.7.3 Apply miscellaneous filters to get the following unique values: Limousine, Truck, Mail Truck, Station Wagon/Sport Utility Vehicle, Garbage or Refuse
 
-&nbsp;&nbsp;5.7.4 Apply miscellaneous filters to get the following unique values: Limousine, Truck, Mail Truck, Station Wagon/Sport Utility Vehicle, Garbage or Refuse
+&nbsp;&nbsp;5.7.4 Remove garbage or insignificant values in typevehi (examples: OTHER, UNKNOWN, pc)
 
-&nbsp;&nbsp;5.7.5 Remove garbage or insignificant values in typevehi (examples: OTHER, UNKNOWN, pc)
-
-&nbsp;&nbsp;5.7.6 Replace NaN values in typevehi (i = 1, 2, 3, 4, 5) with 0
+&nbsp;&nbsp;5.7.5 Replace NaN values in typevehi (i = 1, 2,..., 5) with 0
 
 5.8 Look for duplicates
 
@@ -71,17 +69,16 @@ Remove rows for which location of the crash is not available. Also remove rows w
 
 Used to check the data in the original dataset or replace missing values 
 
-Final shape of DataFrame is (90779, 39)
+Final shape of DataFrame is (90780, 39)
 
-5.12 Save the final DataFrame in a .csv file: see datcrashesfred.csv
+5.12 Save the final DataFrame in a .csv file: see `datcrashesfred.csv`
 
 
-### 6. Improvements/To do
+### 6. Improvements
 
 For 5.7: 
 
-- use a For loop to sort vehicle types
-- other sample datasets may contain other garbage or insignificant strings (mechanical mistakes in written language are unpredictable) and new vehicle types. The program should at least be able to detect such modifications
+- other sample datasets may contain other garbage or insignificant strings (mechanical mistakes in written language are unpredictable) and new vehicle types. The program should be able to detect such modifications
 - check the meaning of some vehicle types (example: PK)
 
 Compare the results obtained from reverse geocoding to the original data (borough, zipcode, onstreet)
