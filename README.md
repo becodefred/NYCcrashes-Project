@@ -24,7 +24,7 @@ Name of the .csv file containing the original data: `data_100000.csv`
 GeoPy, NumPy, Pandas
 
 
-### 4. To run the file (Python3)
+### 4. To run the file (Python 3)
 
 From terminal, type `python3`, then type `exec(open('crashesfred.py').read())`
 
